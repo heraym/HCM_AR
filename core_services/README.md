@@ -1,0 +1,2 @@
+monopoly-core-services.git
+
