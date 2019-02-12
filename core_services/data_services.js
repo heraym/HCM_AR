@@ -3,7 +3,7 @@ var fs = require('fs');
 var Promise = require("bluebird");
 var https = require('https');
 
-var hcm_host = "ucf1-edhr-fa-ext.oracledemos.com";
+var hcm_host = "adc3-ecth-fa-ext.oracledemos.com";
 var hcm_path = "/hcmRestApi/resources/11.13.17.11/emps";
 var hcm_port = 443; 
 var Data_Services = function () {
@@ -20,7 +20,8 @@ Data_Services.prototype.empleado = function (nro, callback) {
            headers: {
               Host: hcm_host,
              "Content-Type": 'application/json',
-             "Authorization": "Basic SENNX0lNUEw6bFJUdCtncE83"
+             //"Authorization": "Basic SENNX0lNUEw6bFJUdCtncE83"
+			 "Authorization": "Basic aGNtX2ltcGw6dWlnNW1aODE3"
            }};   
 
         var datos = "";

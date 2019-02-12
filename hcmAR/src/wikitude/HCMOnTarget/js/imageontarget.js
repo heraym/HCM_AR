@@ -26,6 +26,26 @@ var World = {
 
        this.imgTransp = new AR.ImageResource("assets/Pikachu.gif");
 
+      var infoPablo = new AR.HtmlDrawable({
+       //   html:"<div>Ver info del producto</div>",
+   		  uri: "https://corehcm-gse00014117.uscom-east-1.oraclecloud.com/empleado/3151"
+		}, 0.8, {
+		    viewportWidth: 1000,
+		    viewportHeight: 500, 
+		    backgroundColor: "#000000",
+		    opacity: 0.5,
+		    offsetX: 0.1,
+		    offsetY: 0.5,
+		    horizontalAnchor: AR.CONST.HORIZONTAL_ANCHOR.RIGHT,
+		    verticalAnchor: AR.CONST.VERTICAL_ANCHOR.TOP,
+		    clickThroughEnabled: true,
+		    allowDocumentLocationChanges: false,
+		    onDocumentLocationChanged: function onDocumentLocationChangedFn(uri) {
+		        AR.context.openInBrowser(uri);
+    		}
+          });  
+
+
         var infoMartin = new AR.HtmlDrawable({
        //   html:"<div>Ver info del producto</div>",
    		  uri: "https://corehcm-gse00014117.uscom-east-1.oraclecloud.com/empleado/3153"
@@ -112,6 +132,11 @@ var World = {
 				cam: [infoMartin]
 			}
 		});		
+		var pageFive = new AR.ImageTrackable(this.tracker, "pablo2", {
+			drawables: {
+				cam: [infoPablo]
+			}
+		});	
 		
 	},
    
